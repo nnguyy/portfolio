@@ -1,4 +1,4 @@
-const font = '3D Diagonal';
+const font = 'Slant';
 
 figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/'});
 figlet.preloadFonts([font], ready);
