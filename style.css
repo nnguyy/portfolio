@@ -1,0 +1,26 @@
+
+/*
+  * those CSS variables are defaults,
+  * they are here for documentation purpose
+  */
+:root {
+    --color: #aaa;
+    --background: #000;
+    --size: 1;
+    /* --glow: 1 */
+    --animation: terminal-blink;
+}
+body {
+    background: var(--background, black);
+}
+.terminal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    border-radius: 5px;
+    border: 1px solid var(--color);
+    overflow: hidden;
+}

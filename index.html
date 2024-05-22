@@ -5,33 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
-    <style>
-      /*
-       * those CSS variables are defaults,
-       * they are here for documentation purpose
-       */
-      :root {
-          --color: #aaa;
-          --background: #000;
-          --size: 1;
-          /* --glow: 1 */
-          --animation: terminal-blink;
-      }
-      body {
-          background: var(--background, black);
-      }
-      .terminal {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 800px;
-          height: 400px;
-          border-radius: 5px;
-          border: 1px solid var(--color);
-          overflow: hidden;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css"/> 
   </head>
   <body>
     <div id="terminal"></div>
