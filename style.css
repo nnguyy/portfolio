@@ -2,14 +2,13 @@
     --color: #aaa;
     --background: #000;
     --size: 1;
-    /* --glow: 1 */
+    --glow: 1;
     --animation: terminal-blink;
 }
 body {
     background: var(--background, black);
 }
 .terminal {
-    --size: 1.4;
     position: absolute;
     top: 50%;
     left: 50%;
