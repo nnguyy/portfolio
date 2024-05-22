@@ -1,3 +1,5 @@
+const greetings = "test"
+
 $(function() {
     $('#terminal').terminal({
         love: function(what) {
@@ -5,6 +7,6 @@ $(function() {
         },
         // Define more commands here...
     }, {
-        greetings: 'Welcome to my Terminal Portfolio'
+        greetings
     });
 });
