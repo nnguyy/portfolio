@@ -1,4 +1,4 @@
-const greetings = "test"
+const greetings = "Noah Nguyen\nType 'help' to see list of commands." 
 
 $(function() {
     $('#terminal').terminal({
