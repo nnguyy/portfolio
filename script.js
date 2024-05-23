@@ -37,5 +37,6 @@ function ready() {
 }
 
 $(document).ready(function() {
-
+  figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/' });
+  figlet.preloadFonts([font], ready);
 });
