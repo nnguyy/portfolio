@@ -32,7 +32,7 @@ function ready() {
   term.pause();
   term.echo(() => {
     const ascii = render('Noah Nguyen');
-    return "${ascii}\nType 'help' for a list of available commands";
+    return "" + ascii + "\nType 'help' for a list of available commands";
   }).resume();
 }
 
