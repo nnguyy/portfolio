@@ -1,6 +1,6 @@
 const font = 'Ivrit';
 
-figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/'});
+figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/' });
 figlet.preloadFonts([font], ready);
 
 function render(text) {
@@ -18,24 +18,26 @@ function trim(str) {
 
 const commands = {
   love: function(what) {
-      this.echo("To my love, " + what + ". Hi my love!, You are as cute as a button!");
+    this.echo("To my love, " + what + ". Hi my love!, You are as cute as a button!");
   },
-  // add more 
+  // add more commands here...
 };
 
 let term;
 
 function ready() {
   term = $('#terminal').terminal(commands, {
-    greetings:false
+    greetings: false
   });
   term.pause();
   term.echo(() => {
     const ascii = render('Noah Nguyen');
-    return "" + ascii + "\nType 'help' for a list of available commands";
+    return `${ascii}\nType 'help' for a list of available commands`;
   }).resume();
 }
 
 $(document).ready(function() {
-
+  figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/' });
+  figlet.preloadFonts([font], ready);
 });
+
