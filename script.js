@@ -1,4 +1,4 @@
-const font = 'Rounded';
+const font = 'Ivrit';
 
 figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/'});
 figlet.preloadFonts([font], ready);
