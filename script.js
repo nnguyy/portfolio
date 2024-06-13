@@ -18,7 +18,7 @@ function trim(str) {
 
 const commands = {
   love: function(what) {
-      this.echo("To my love, " + what + ". Hi my love!, You are as cute as a button!");
+      this.echo("You are as cute as a button!");
   },
   // add more 
 };
@@ -32,7 +32,7 @@ function ready() {
   term.pause();
   term.echo(() => {
     const ascii = render('Noah Nguyen');
-    return "${ascii}\nType 'help' for a list of available commands";
+    return "Noah Nguyen\nType 'help' for a list of available commands";
   }).resume();
 }
 
