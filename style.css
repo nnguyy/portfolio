@@ -9,14 +9,15 @@ body {
     background: var(--background, black);
 }
 .terminal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 400px;
+    width: calc(100vw - 20%);
+    height: calc(100vh - 20%);
     border-radius: 5px;
     border: 1px solid var(--color);
     overflow: hidden;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1vw + 1vh);
+    color: var(--color);
+    background-color: var(--background);
 }
