@@ -10,12 +10,10 @@ body {
 }
 .terminal {
     position: absolute;
-    height: 50vh;
-    width: 50vw;
     display: flex;
-    width: 800px;
-    height: 400px;
-    border-radius: 5px;
+    width: w-10;
+    height: h-10;
+    border-radius: 10px;
     border: 1px solid var(--color);
     overflow: hidden;
 }
