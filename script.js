@@ -1,4 +1,4 @@
-const font = 'nancyj';
+const font = 'slant';
 
 figlet.defaults({ fontPath: 'https://unpkg.com/figlet/fonts/' });
 figlet.preloadFonts([font], ready);
