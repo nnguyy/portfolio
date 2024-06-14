@@ -27,7 +27,7 @@ let term;
 
 function ready() {
   term = $('#terminal').terminal(commands, {
-    greetings:false
+    greetings:false,
     height: '100%',
     width: '100%',
   });
