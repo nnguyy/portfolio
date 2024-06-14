@@ -17,6 +17,9 @@ function trim(str) {
 }
 
 const commands = {
+  help: function() {
+      this.echo("This feature does not work yet!")
+  }
   love: function(what) {
       this.echo("You are as cute as a button!");
   },
