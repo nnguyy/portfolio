@@ -11,8 +11,8 @@ body {
 .terminal {
     position: absolute;
     display: flex;
-    width: w-10;
-    height: h-10;
+    width: w;
+    height: h;
     border-radius: 10px;
     border: 1px solid var(--color);
     overflow: hidden;
