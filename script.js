@@ -28,6 +28,8 @@ let term;
 function ready() {
   term = $('#terminal').terminal(commands, {
     greetings:false
+    height: '100%',
+    width: '100%',
   });
   term.pause();
   term.echo(() => {

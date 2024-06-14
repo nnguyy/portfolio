@@ -7,13 +7,18 @@
 }
 body {
     background: var(--background, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 .terminal {
-    position: absolute;
-    margin: 50px;
-    width: 800px;
-    height: 800px;
+    position: relative;
+    width: 90vw;
+    height: 90vh;
     border-radius: 10px;
     border: 1px solid var(--color);
     overflow: hidden;
+    transition: all 0.3s ease;
 }
