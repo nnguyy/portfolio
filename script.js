@@ -18,7 +18,6 @@ function trim(str) {
 
 const commands = {
   help: function() {
-    this.echo("This feature does not work yet!");
     this.echo("COMMANDS:");
     this.echo("   help        Display this help message");
 
