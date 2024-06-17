@@ -18,10 +18,13 @@ function trim(str) {
 
 const commands = {
   help: function() {
-      this.echo("This feature does not work yet!")
-  }
+    this.echo("This feature does not work yet!");
+    this.echo("COMMANDS:");
+    this.echo("   help        Display this help message");
+
+  },
   love: function(what) {
-      this.echo("You are as cute as a button!");
+    this.echo("You are as cute as a button!");
   },
   // add more 
 };
