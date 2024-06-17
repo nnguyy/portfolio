@@ -18,8 +18,10 @@ function trim(str) {
 
 const commands = {
   help: function() {
-    this.echo("COMMANDS:");
+    this.echo("\nCOMMANDS:");
     this.echo("   help        Display this help message");
+    this.echo("   all         Runs every command");
+
 
   },
   love: function(what) {
