@@ -24,7 +24,7 @@ const commands = {
 
 
   },
-  love: function(what) {
+  love: function() {
     this.echo("You are as cute as a button!");
   },
   // add more 
