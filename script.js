@@ -21,6 +21,8 @@ const commands = {
     this.echo("\nCOMMANDS:");
     this.echo("   help        Display this help message");
     this.echo("   all         Runs every command");
+    this.echo("   about       Short description");
+    this.echo("   contact     Find more information"); 
 
 
   },
