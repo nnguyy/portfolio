@@ -25,7 +25,7 @@ const commands = {
     this.echo("   contact     More information on me"); 
   },
   all: function() {
-    
+   commands.help(); 
   },
   about: function() {
     
