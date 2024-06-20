@@ -25,18 +25,20 @@ const commands = {
     this.echo("   contact     More information on me"); 
   },
   all: function() {
-   commands.help(); 
+    this.exec('help');
+    this.exec('about');
+    this.exec('contact');
   },
   about: function() {
-    
+    this.echo("This is a short description about me.");
   },
   contact: function() {
-    
+    this.echo(" Email     nnoahnguyenn@gmail.com");
+    this.echo(" Github    github.com/nnguyy");
   },
   love: function() {
     this.echo("You are as cute as a button!");
   },
-  // add more 
 };
 
 let term;
