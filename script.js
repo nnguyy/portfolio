@@ -18,26 +18,39 @@ function trim(str) {
 
 const commands = {
   help: function() {
-    this.echo("\nCOMMANDS:");
+    this.echo("");
+    this.echo("COMMANDS:");
     this.echo("   help        Display this help message");
+    this.echo("   clear       Clear the terminal screen");
     this.echo("   all         Runs every command");
     this.echo("   about       My short description");
-    this.echo("   contact     More information on me"); 
+    this.echo("   contact     More information on me");
+    this.echo("");
+  },
+  clear: function() {
+    this.clear();
+    this.echo("Noah Nguyen\nType 'help' for a list of available commands");
   },
   all: function() {
-    this.exec('help');
     this.exec('about');
     this.exec('contact');
   },
   about: function() {
-    this.echo("This is a short description about me.");
+    this.echo("");
+    this.echo(" This is a short description about me.");
+    this.echo("");
   },
   contact: function() {
+    this.echo("");
     this.echo(" Email     nnoahnguyenn@gmail.com");
-    this.echo(" Github    github.com/nnguyy");
+    this.echo(" Github    https://github.com/nnguyy");
+    this.echo("");
   },
   love: function() {
     this.echo("You are as cute as a button!");
+  },
+  love2: function() {
+    this.echo("I LOVE YOU SO MUCH I MISS YOU! come save me wah wah");
   },
 };
 
