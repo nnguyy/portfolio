@@ -21,10 +21,17 @@ const commands = {
     this.echo("\nCOMMANDS:");
     this.echo("   help        Display this help message");
     this.echo("   all         Runs every command");
-    this.echo("   about       Short description");
-    this.echo("   contact     Find more information"); 
-
-
+    this.echo("   about       My short description");
+    this.echo("   contact     More information on me"); 
+  },
+  all: function() {
+   commands.help(); 
+  },
+  about: function() {
+    
+  },
+  contact: function() {
+    
   },
   love: function() {
     this.echo("You are as cute as a button!");
