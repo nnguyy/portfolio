@@ -37,7 +37,9 @@ const commands = {
   },
   about: function() {
     this.echo("");
-    this.echo(" This is a short description about me.");
+    this.echo(" Name        Noah Nguyen");
+    this.echo(" Age         ${age}");
+    this.echo(" Location    Columbus, Ohio");
     this.echo("");
   },
   contact: function() {
