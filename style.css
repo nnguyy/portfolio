@@ -5,31 +5,79 @@
     --glow: 1;
     --animation: terminal-blink;
 }
+
 body {
-    background: var(--background, black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
+    padding: 20px;
 }
+
 .terminal {
+    margin: auto;
+    padding: 20px;
     position: relative;
-    width: 90vw;
-    height: 90vh;
+    width: 50vw;
+    height: 50vh;
     border-radius: 10px;
-    border: 1px solid var(--color);
-    overflow: hidden;
+    border: 2px solid var(--color);
+    box-shadow: 0 0 10px var(--color);
     transition: all 0.3s ease;
 }
-.center {
-    text-align: center;
+
+.terminal p {
 }
-nav {
+
+.container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin-top: 1vw;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px; /* Optional: Add spacing between links */
+  text-decoration: none; /* Optional: Remove underline */
+  color: #0f0; /* Optional: Set link color */
+  font-family: 'Courier New', Courier, monospace; /* Match terminal theme */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.cursor {
+    animation: 1s blink step-end infinite
+}
+
+.prompt {
+    color: #0f0;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing:-5px;
+}
+
+.prompt a {
+    color: #0f0;
+}
+
+.prompt a:hover {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
