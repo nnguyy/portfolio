@@ -18,8 +18,8 @@ body {
     margin: auto;
     padding: 20px;
     position: relative;
-    width: 50vw;
-    height: 50vh;
+    width: 75vw;
+    height: 75vh;
     border-radius: 10px;
     border: 2px solid var(--color);
     box-shadow: 0 0 10px var(--color);
