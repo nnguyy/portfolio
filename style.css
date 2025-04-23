@@ -59,6 +59,7 @@ body {
 ---------------------------------------- */
 .hero {
   text-align: center;
+  margin-top: -13rem; /* Adjust this value to move it up */
 }
 
 .title {
