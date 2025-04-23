@@ -34,7 +34,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.6s ease;
+  transition: opacity 1.6s ease;
 }
 
 #loader.fade-out {
@@ -73,7 +73,6 @@ body {
 h1 {
   font-size: 4rem;
   letter-spacing: 0.1em;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .cursor {
@@ -87,10 +86,12 @@ h1 {
   margin-top: 1rem;
   font-size: 1.25rem;
   color: #888;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero nav {
   margin-top: 2rem;
+  animation: fadeIn 4.5s ease-in-out;
 }
 .hero nav a {
   margin: 0 1rem;
