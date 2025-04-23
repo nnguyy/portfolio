@@ -9,7 +9,7 @@
 
 html, body {
   height: 100%;
-  overflow: hidden; /* Disable scrolling */
+  overflow: hidden; /* Disable page scrolling */
 }
 
 body {
@@ -19,7 +19,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* start at top */
+  padding-top: 4rem;           /* lift hero up */
 }
 
 /* ----------------------------------------
@@ -59,7 +60,7 @@ body {
 ---------------------------------------- */
 .hero {
   text-align: center;
-  margin-top: -13rem; /* Adjust this value to move it up */
+  margin-top: 5rem;
 }
 
 .title {
@@ -72,7 +73,6 @@ body {
 h1 {
   font-size: 4rem;
   letter-spacing: 0.1em;
-  display: inline-block;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -83,63 +83,74 @@ h1 {
   animation: blink 1s steps(2) infinite;
 }
 
-p {
+.hero p {
   margin-top: 1rem;
   font-size: 1.25rem;
   color: #888;
 }
 
-nav {
+.hero nav {
   margin-top: 2rem;
 }
-nav a {
+.hero nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: #888;
   transition: color 0.3s;
 }
-nav a:hover {
+.hero nav a:hover {
   color: #eee;
 }
 
 /* ----------------------------------------
-   CONTENT SECTIONS
+   STACKED CONTENT SECTIONS
 ---------------------------------------- */
 .content-container {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;    /* establish stacking context */
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin-top: 2rem;      /* space below hero */
+  height: 200px;         /* reserve space for the stacked sections */
   pointer-events: none;
-  z-index: 10;
 }
 
 .section {
+  position: absolute;    /* stack on top of one another */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
   opacity: 0;
-  transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
-  background: rgba(20,20,20,0.95);
+  background: rgba(20, 20, 20, 0.95);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   max-width: 500px;
+  width: 90%;
   text-align: center;
   pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 }
 
 .section.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
   pointer-events: auto;
+  z-index: 1;
 }
 
+.section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.section ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+}
+.section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
 
 /* ----------------------------------------
    ANIMATIONS
