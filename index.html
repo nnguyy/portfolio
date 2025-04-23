@@ -1,13 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My first three.js app</title>
-    <style>
-      body { margin: 0; }
-    </style>
-  </head>
-  <body>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noah Nguyen</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Hero Section Wrapper -->
+  <div class="hero-wrapper">
+    <div class="hero">
+      <div class="title">
+        <h1>Noah Nguyen</h1><span class="cursor"></span>
+      </div>
+      <p>Web Developer &amp; NixOS Enthusiast</p>
+      <nav>
+        <a href="#" data-target="projects">Projects</a>
+        <a href="#" data-target="about">About</a>
+        <a href="#" data-target="contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sliding Content Sections -->
+  <div id="content" class="content-container">
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <ul>
+        <li>
+          <strong>Expense Tracker</strong><br/>
+          Log your expenses, categorize, and view charts. Built with vanilla JS and Chart.js.
+        </li>
+        <li>
+          <strong>Habit Tracker</strong><br/>
+          Track daily habits in a calendar view. Auth via Firebase, built in React.
+        </li>
+        <li>
+          <strong>Contacts Manager</strong><br/>
+          Full-stack CRUD app with Node.js, Express, and PostgreSQL.
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        Hi—I’m Noah. I craft modern web experiences with clean code and declarative infrastructure. When I’m not coding, I tinker with NixOS configurations and enjoy learning new tech.
+      </p>
+      <p>
+        ⚡ 2+ years of self-driven web development<br/>
+        🐧 Passionate about Linux &amp; Open Source<br/>
+        🌐 Constantly exploring front-end frameworks
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:noah@example.com">noah@example.com</a><br/>
+        💼 <a href="https://linkedin.com/in/noahnguyen" target="_blank">LinkedIn</a><br/>
+        🐙 <a href="https://github.com/noahnguyen" target="_blank">GitHub</a>
+      </p>
+    </section>
+  </div>
+
+  <script>
+    // Loader fade-out
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.classList.add('fade-out');
+      setTimeout(() => loader.remove(), 600);
+    });
+
+    // In-page nav animation
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.section');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.dataset.target;
+        sections.forEach(sec => {
+          sec.id === targetId
+            ? sec.classList.add('active')
+            : sec.classList.remove('active');
+        });
+      });
+    });
+  </script>
+</body>
 </html>
+
